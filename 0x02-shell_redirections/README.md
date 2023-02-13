@@ -59,7 +59,7 @@
     - The **‘decoded’** message has to end with a new line.
     - You are not allowed to use `grep`, `egrep`, `fgrep` or `rgrep`.
 26. [The biggest fan](./103-the_biggest_fan) : A script that parses web servers logs in TSV format as input and displays the 11 hosts or IP addresses which did the most requests.
-    - Download this file: `wget http://indeedeng.github.io/imhotep/files/nasa_19950801.tsv`
+    - Download this file: `wget https://s3.amazonaws.com/alx-intranet.hbtn.io/public/nasa_19950801.tsv`
     - Run command this way: `./103-the_biggest_fan < nasa_19950801.tsv`.
     - Order by number of requests, most active host or IP at the top.
     - You are not allowed to use `grep`, `egrep`, `fgrep` or `rgrep`.
