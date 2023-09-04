@@ -15,7 +15,7 @@ file {'/var/www/html/index.html':
 }
 
 exec {'redirect_me':
-	command => 'sed -i "24i\	rewrite ^/redirect_me https://th3-gr00t.tk/ permanent;" /etc/nginx/sites-available/default',
+	command => 'sed -i "24i\	rewrite ^/redirect_me https://lazy-engineer.tech/ permanent;" /etc/nginx/sites-available/default',
 	provider => 'shell'
 }
 
