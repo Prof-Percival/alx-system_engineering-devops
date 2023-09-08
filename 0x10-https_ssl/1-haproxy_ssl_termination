@@ -1,6 +1,7 @@
 global
         log /dev/log    local0
 	stats socket /run/haproxy/admin.sock mode 660 level admin
+	ssl-dh-param-file /etc/haproxy/dhparams.pem
 
 defaults
         log     global
@@ -12,10 +13,10 @@ defaults
 
 frontend lazy-engineer-frontend
 	bind *:80
-	bind *:443 ssl crt /etc/letsencrypt/live/www.lazy-engineer.tech/cert.pem
+	bind *:443 ssl crt /etc/letsencrypt/live/www.lazy-engineer.tech/lazy-engineer.tech.pem
 	http-request redirect scheme https unless { ssl_fc }
 	http-request set-header X-Forwarded-Proto https
-	default_backend lazy-engineer-frontend
+	default_backend lazy-engineer-backend
 
 backend lazy-engineer-backend
     balance roundrobin
